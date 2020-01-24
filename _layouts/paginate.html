@@ -21,8 +21,8 @@ layout: default
 {% endfor %}
 {% if paginator.total_pages > 1 %}
 <footer class="{% if site.dark_footer %}dark{% endif %}">
-  <a {% if paginator.previous_page %}class="gray" href="{{ paginator.previous_page_path | relative_url }}"{% else %}class="disabled"{% endif %}>&larr; Buradayım</a>
-  <span>Sayfa {{ paginator.page }} itibaren {{ paginator.total_pages }}</span>
+  <a {% if paginator.previous_page %}class="gray" href="{{ paginator.previous_page_path | relative_url }}"{% else %}class="disabled"{% endif %}>&larr; Önceki</a>
+  <span> {{ paginator.page }} - {{ paginator.total_pages }}</span>
   <a {% if paginator.next_page %}class="gray" href="{{ paginator.next_page_path | relative_url }}"{% else %}class="disabled"{% endif %}>Sonraki &rarr;</a>
 </footer>
 {% else %}
