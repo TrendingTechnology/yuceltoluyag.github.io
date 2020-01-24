@@ -7,7 +7,7 @@ layout: default
     {%- assign date_format = site.date_format | default: "%B %d, %Y" -%}
     <h1><a href="{{ page.url | relative_url }}">{{ page.title }}</a></h1>
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: date_format }}</time>
-    {% if page.tags %} | 
+    {% if page.tags %} |
     {% for tag in page.tags %}
     <a href="{{ site.tag_page | relative_url }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
     {% endfor %}
@@ -21,9 +21,9 @@ layout: default
 {% endfor %}
 {% if paginator.total_pages > 1 %}
 <footer class="{% if site.dark_footer %}dark{% endif %}">
-  <a {% if paginator.previous_page %}class="gray" href="{{ paginator.previous_page_path | relative_url }}"{% else %}class="disabled"{% endif %}>&larr; сюда</a>
-  <span>страница {{ paginator.page }} из {{ paginator.total_pages }}</span>
-  <a {% if paginator.next_page %}class="gray" href="{{ paginator.next_page_path | relative_url }}"{% else %}class="disabled"{% endif %}>туда &rarr;</a>
+  <a {% if paginator.previous_page %}class="gray" href="{{ paginator.previous_page_path | relative_url }}"{% else %}class="disabled"{% endif %}>&larr; Buradayım</a>
+  <span>Sayfa {{ paginator.page }} itibaren {{ paginator.total_pages }}</span>
+  <a {% if paginator.next_page %}class="gray" href="{{ paginator.next_page_path | relative_url }}"{% else %}class="disabled"{% endif %}>Sonraki &rarr;</a>
 </footer>
 {% else %}
 {% unless site.hide_footer %}
