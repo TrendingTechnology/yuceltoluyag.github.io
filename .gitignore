@@ -1,0 +1,8 @@
+*.gem
+.DS_Store
+.bundle
+.sass-cache
+.jekyll-cache
+_site
+package-lock.json
+node_modules

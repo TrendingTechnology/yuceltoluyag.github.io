@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="{% if site.dark_theme %}dark{% else %}light{% endif %}">
+{% include head.html %}
+<body>
+  <header class="{% if site.dark_header %}dark{% endif %}">
+    {% unless site.hide_title or site.style == "minimal" %}
+    <h1><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
+    {% endunless %}
+    {% if site.navigation %}
+    <nav>
+      {% for path in site.navigation %}
+      {% if path.first %}
+      <a href="{{ path.first[1] }}">{{ path.first[0] }}</a>
+      {% else %}
+      {% assign node = site.pages | where: "name", path | first %}
+      <a href="{{ node.url | relative_url }}">{{ node.title }}</a>
+      {% endif %}
+      {% endfor %}
+      <a href="#search">AraBeni</a>
+    </nav>
+    {% endif %}
+    {% if site.icons %}
+    <nav>
+      {% for link in site.icons %}
+      <a target="_blank" class="icon" href="{{ link[1] }}"><svg><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#{{ link[0] }}"></use></svg></a>
+      {% endfor %}
+    </nav>
+    {% endif %}
+  </header>
+  {{ content }}  
+  <!-- Search Form popup -->
+  <div id="search"> 
+    <span class="close">x</span>
+    <form role="search" id="searchform" action="/search/" method="get">
+      <input value="" name="q" type="search" placeholder="Ara Sıra Ara Beni Yar" required>
+    </form>
+  </div>
+  <div id="scrollup">&uarr;</div>
+
+  <script src="{{ "/assets/js/jquery.min.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/magnific-popup/jquery.magnific-popup.min.js" | relative_url }}"></script>  
+  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+  <script src='https://cdn.rawgit.com/kandebonfim/show-your-terms/master/dist/show-your-terms.min.js' type='text/javascript'/>
+  
+
+  {% if site.comments.disqus %}
+  {% if page.comments %}
+  <script src="//{{ site.comments.disqus }}.disqus.com/embed.js" async></script>
+  {% endif %}
+  {% endif %}
+</body>
+</html>
