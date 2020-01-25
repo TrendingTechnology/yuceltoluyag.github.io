@@ -52,7 +52,7 @@ tag_page: "/tags/"
 include: ["_pages"]
 
 comments:
-  disqus: "adamcoder"
+  disqus: "yuceltoluyag"
 
 sass:
   style: compressed
