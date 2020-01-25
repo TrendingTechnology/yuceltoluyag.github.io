@@ -30,6 +30,8 @@ chsh — s /usr/bla/blashell shelinizi değiştirmeye çalıştığınızda 
 
 <font color="orange"> manuel olarak işlemi gerçekleştirdik. Pek sağlıklı bir yöntem değildir lakin fazla bilgi göz çıkarmaz 😅  </font>
 
+<font color="red"> Geçiş işlemlerinde kullandığınız uygulamayı direkt silmeye yeltenmeyin. Örneğin sistemde zsh veya fish kullanıyorsunuz diyelim, bunları kaldırayım başa döneyim istediniz kesinlikle direkt silip nasılsa başlangıca döner mantığıyla düşünmeyin. Son kullanıcıysanız veya temel bilgiye sahipseniz bu durum sizi sıkıntıya sokabilir.😅 Bu sizden eğer shell uygulaması değiştirilecekse önce **chsh — s** bash(örnek)  komutuyla değiştirilir. Sistem yeniden başlatılır ve daha sonra zsh,fish kaldırılır. </font>
+
 Yada ev dizininde .bashrc dosyasını açın en alt satıra (yada .bash_profile)
 
 ```sh
