@@ -11,7 +11,10 @@ edit_url:  true
 Merhaba, httrack websitelerini internetiniz yokken kullanmak amaçlı üretilmiş bir yazılımdır. Windows tarafında sıkça kullandığım bu yazılımın linux tarafında terminal üzerinden nasıl kullanılacağı ile ilgili bir döküman hazırlamak istedim.
 
 ```sh
-sudo apt-get install httrack #programı kuruyoruzEnter project name : #projenin ismiBase path (return=/home/baba/websites/) : : #projenin indirileceği dizinEnter URLs (separated by commas or blank spaces) : #Kaydedeceğiniz websitesinin adresi
+sudo apt-get install httrack #programı kuruyoruzEnter
+project name : #projenin ismi
+Base path (return=/home/baba/websites/): #projenin indirileceği dizin
+Enter URLs (separated by commas or blank spaces) : #Kaydedeceğiniz websitesinin adresi
 ```
 
 Action (enter) Kısmında ki menüler ise şöyle :
