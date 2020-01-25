@@ -20,11 +20,11 @@ Aşağıdaki dosya dizinine gidin not defteri veya herhangi bir editörle açın
 3.  XAMPP dizini gidin editorunuzle açın
 C:\xampp\apache\conf\extra\httpd-vhosts.conf
 
-  ServerAdmin webmaster@dummy-host.example.com
-    DocumentRoot "C:/xampp/htdocs/<font color='red'>eticaret/</font>"
-    <font color='orange'>ServerName eticaret.test</font>
-    <font color='yellow'>ServerAlias www.eticaret.test</font>
-    ErrorLog "logs/eticaret.test-error.log"
-    CustomLog "logs/eticaret.test-access.log
+      ServerAdmin webmaster@dummy-host.example.com
+        DocumentRoot "C:/xampp/htdocs/<font color='red'>eticaret/</font>"
+        <font color='orange'>ServerName eticaret.test</font>
+        <font color='yellow'>ServerAlias www.eticaret.test</font>
+        ErrorLog "logs/eticaret.test-error.log"
+        CustomLog "logs/eticaret.test-access.log
 
 Kırmızıyla işaretlenen yere klasör adınızı yazmalısınız. Sarı ile işaretlenen yere yukarıda yazdığımız domain ismini yazacaksınız.Xampp yeniden başlatın
